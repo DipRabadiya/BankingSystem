@@ -30,6 +30,11 @@ public class BankService {
         updateAccount.setBalance(currentBalance);
         updateAccount.setAcNo(currentAccount.getAcNo());
         updateAccount.setAcHolderName(currentAccount.getAcHolderName());
+        updateAccount.setEmail(currentAccount.getEmail());
+        updateAccount.setAddress(currentAccount.getAddress());
+        updateAccount.setPhoneNo(currentAccount.getPhoneNo());
+        updateAccount.setRegion(currentAccount.getRegion());
+        updateAccount.setPostalZip(currentAccount.getPostalZip());
         bankRepository.save(updateAccount);
         return AfterWithdrawBalance.builder()
                 .withdraw(withdrawBalance)

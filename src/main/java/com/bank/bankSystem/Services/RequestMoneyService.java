@@ -51,6 +51,11 @@ public class RequestMoneyService {
             updateSenderAccount.setBalance(currentSenderBalance);
             updateSenderAccount.setAcNo(senderAccount.getAcNo());
             updateSenderAccount.setAcHolderName(senderAccount.getAcHolderName());
+            updateSenderAccount.setEmail(senderAccount.getEmail());
+            updateSenderAccount.setAddress(senderAccount.getAddress());
+            updateSenderAccount.setPhoneNo(senderAccount.getPhoneNo());
+            updateSenderAccount.setRegion(senderAccount.getRegion());
+            updateSenderAccount.setPostalZip(senderAccount.getPostalZip());
             bankRepository.save(updateSenderAccount);
 
             Bank updateReceiverAccount = new Bank();
@@ -58,6 +63,11 @@ public class RequestMoneyService {
             updateReceiverAccount.setBalance(currentReceiverBalance);
             updateReceiverAccount.setAcNo(receiverAccount.getAcNo());
             updateReceiverAccount.setAcHolderName(receiverAccount.getAcHolderName());
+            updateReceiverAccount.setEmail(receiverAccount.getEmail());
+            updateReceiverAccount.setAddress(receiverAccount.getAddress());
+            updateReceiverAccount.setPhoneNo(receiverAccount.getPhoneNo());
+            updateReceiverAccount.setRegion(receiverAccount.getRegion());
+            updateReceiverAccount.setPostalZip(receiverAccount.getPostalZip());
             bankRepository.save(updateReceiverAccount);
 
             RequestMoney requestUpdateMoney = new RequestMoney();

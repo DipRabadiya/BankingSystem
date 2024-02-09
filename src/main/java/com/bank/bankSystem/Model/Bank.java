@@ -41,5 +41,4 @@ public class Bank {
     private String postalZip;
     private String region;
     private Double balance;
-
 }
